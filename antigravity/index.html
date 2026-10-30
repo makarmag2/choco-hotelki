@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шоколадные хотелки — Удочки и шоколадные вентиляторы</title>
+    <meta name="description" content="Магазин уникальных удочек и шоколадных вентиляторов. Лучшие товары для рыбалки и сладкой свежести!">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍫</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Cursor trail -->
+    <canvas id="cursorCanvas"></canvas>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <span class="logo__icon">🍫</span>
+                <span class="logo__text">Шоколадные<br>хотелки</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#catalog" class="nav__link">Каталог</a>
+                <a href="#about" class="nav__link">О нас</a>
+                <a href="#benefits" class="nav__link">Почему мы</a>
+                <a href="#contact" class="nav__link">Контакты</a>
+            </nav>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="container hero__inner">
+            <div class="hero__content reveal">
+                <h1 class="hero__title">
+                    Удочки <span class="hero__amp">&</span> Шоколадные вентиляторы
+                </h1>
+                <p class="hero__subtitle">
+                    Два мира — одна страсть. Лови рыбу мечты и&nbsp;наслаждайся сладким бризом.
+                </p>
+                <div class="hero__actions">
+                    <a href="#catalog" class="btn btn--primary">Смотреть каталог</a>
+                    <a href="#contact" class="btn btn--outline">Связаться с нами</a>
+                </div>
+            </div>
+            <div class="hero__visual reveal reveal--delay">
+                <div class="hero__float hero__float--rod">🎣</div>
+                <div class="hero__float hero__float--choco">🍫</div>
+                <div class="hero__float hero__float--fan">🌀</div>
+                <div class="hero__float hero__float--fish">🐟</div>
+            </div>
+        </div>
+        <div class="hero__wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120Z" fill="var(--bg)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== CATALOG ========== -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+
+            <!-- Удочки -->
+            <div class="catalog__section">
+                <div class="section-header reveal">
+                    <span class="section-header__icon">🎣</span>
+                    <h2 class="section-header__title">Удочки</h2>
+                    <p class="section-header__desc">Проверенные снасти для настоящих рыболовов — от&nbsp;новичка до&nbsp;профи</p>
+                </div>
+                <div class="products">
+
+                    <div class="card reveal">
+                        <div class="card__img card__img--rod1">
+                            <img src="img/rod1.svg" alt="Удочка Золотой Карась" loading="lazy">
+                            <span class="card__badge">Хит</span>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Золотой Карась</h3>
+                            <p class="card__desc">Классическая поплавочная удочка. Углепластик, длина 4&nbsp;м. Идеальна для озёр и&nbsp;тихих рек.</p>
+                            <div class="card__footer">
+                                <span class="card__price">2 190 ₽</span>
+                                <button class="btn btn--sm btn--primary" data-order="Удочка «Золотой Карась» — 2 190 ₽">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card__img card__img--rod2">
+                            <img src="img/rod2.svg" alt="Спиннинг Щука Про" loading="lazy">
+                            <span class="card__badge card__badge--new">Новинка</span>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Щука Про</h3>
+                            <p class="card__desc">Спиннинг для хищника. Карбон, 2.7&nbsp;м, тест 10-35&nbsp;г. Мощь и&nbsp;точность заброса.</p>
+                            <div class="card__footer">
+                                <span class="card__price">3 790 ₽</span>
+                                <button class="btn btn--sm btn--primary" data-order="Спиннинг «Щука Про» — 3 790 ₽">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card__img card__img--rod3">
+                            <img src="img/rod3.svg" alt="Детская удочка Малёк" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Малёк</h3>
+                            <p class="card__desc">Детская удочка. Стекловолокно, 2&nbsp;м. Лёгкая, яркая, безопасная — первый улов вашего ребёнка!</p>
+                            <div class="card__footer">
+                                <span class="card__price">690 ₽</span>
+                                <button class="btn btn--sm btn--primary" data-order="Удочка «Малёк» (детская) — 690 ₽">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Шоколадные вентиляторы -->
+            <div class="catalog__section">
+                <div class="section-header reveal">
+                    <span class="section-header__icon">🍫</span>
+                    <h2 class="section-header__title">Шоколадные вентиляторы</h2>
+                    <p class="section-header__desc">Свежий ветер с&nbsp;ароматом настоящего шоколада — роскошь, которую вы&nbsp;заслужили</p>
+                </div>
+                <div class="products">
+
+                    <div class="card reveal">
+                        <div class="card__img card__img--fan1">
+                            <img src="img/fan1.svg" alt="Вентилятор ШокоБриз" loading="lazy">
+                            <span class="card__badge">Хит</span>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">ШокоБриз</h3>
+                            <p class="card__desc">Настольный вентилятор с&nbsp;ароматом молочного шоколада. 3&nbsp;скорости, тихий мотор, стиль и&nbsp;уют.</p>
+                            <div class="card__footer">
+                                <span class="card__price">1 890 ₽</span>
+                                <button class="btn btn--sm btn--primary" data-order="Вентилятор «ШокоБриз» — 1 890 ₽">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card__img card__img--fan2">
+                            <img src="img/fan2.svg" alt="Вентилятор Какао Торнадо" loading="lazy">
+                            <span class="card__badge card__badge--new">Премиум</span>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Какао Торнадо</h3>
+                            <p class="card__desc">Напольный вентилятор с&nbsp;3&nbsp;режимами шоколадного аромата: молочный, горький, белый. Пульт ДУ.</p>
+                            <div class="card__footer">
+                                <span class="card__price">4 490 ₽</span>
+                                <button class="btn btn--sm btn--primary" data-order="Вентилятор «Какао Торнадо» — 4 490 ₽">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card reveal">
+                        <div class="card__img card__img--fan3">
+                            <img src="img/fan3.svg" alt="Вентилятор Сладкий Ветерок" loading="lazy">
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Сладкий Ветерок</h3>
+                            <p class="card__desc">Портативный USB-вентилятор. Аромат горького шоколада 72%. Берите на&nbsp;работу, в&nbsp;парк, куда угодно!</p>
+                            <div class="card__footer">
+                                <span class="card__price">790 ₽</span>
+                                <button class="btn btn--sm btn--primary" data-order="Вентилятор «Сладкий Ветерок» — 790 ₽">Заказать</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__text reveal">
+                    <h2 class="about__title">Откуда такое безумие?</h2>
+                    <p>Мы верим, что лучшие вещи рождаются на стыке несовместимого. Однажды основатель магазина вернулся с&nbsp;рыбалки, съел плитку шоколада перед вентилятором и&nbsp;подумал: <em>«А&nbsp;что, если&nbsp;объединить?»</em></p>
+                    <p>Так появились <strong>«Шоколадные хотелки»</strong> — место, где профессиональные снасти для рыбалки соседствуют с&nbsp;вентиляторами, дарящими аромат настоящего шоколада. Странно? Возможно. Гениально? Определённо.</p>
+                </div>
+                <div class="about__visual reveal reveal--delay">
+                    <div class="about__card">
+                        <span>🎣</span>
+                        <span class="about__plus">+</span>
+                        <span>🍫</span>
+                        <span class="about__plus">+</span>
+                        <span>🌀</span>
+                        <span class="about__eq">=</span>
+                        <span>❤️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BENEFITS ========== -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-header__title">Почему выбирают нас</h2>
+            </div>
+            <div class="benefits__grid">
+                <div class="benefit reveal">
+                    <div class="benefit__icon">🚚</div>
+                    <h3 class="benefit__title">Быстрая доставка</h3>
+                    <p class="benefit__text">Доставляем по&nbsp;всей России. Удочки&nbsp;— бережно, вентиляторы&nbsp;— ароматно.</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="benefit__icon">✅</div>
+                    <h3 class="benefit__title">Гарантия качества</h3>
+                    <p class="benefit__text">30&nbsp;дней на&nbsp;возврат. Если шоколадный аромат не&nbsp;покорил — вернём деньги.</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="benefit__icon">💬</div>
+                    <h3 class="benefit__title">Поддержка 24/7</h3>
+                    <p class="benefit__text">Пишите в&nbsp;Telegram или WhatsApp — ответим быстрее, чем клюнет карась.</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="benefit__icon">🎁</div>
+                    <h3 class="benefit__title">Подарки к заказу</h3>
+                    <p class="benefit__text">К&nbsp;каждому заказу — мини-плитка шоколада. Потому что мы&nbsp;можем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-header__title">Свяжитесь с нами</h2>
+                <p class="section-header__desc">Выберите удобный способ — ответим быстро!</p>
+            </div>
+            <div class="contact__grid reveal">
+                <a href="https://t.me/rgr2" target="_blank" rel="noopener" class="contact__card contact__card--tg">
+                    <div class="contact__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact__label">Telegram</div>
+                        <div class="contact__value">@rgr2</div>
+                    </div>
+                </a>
+                <a href="https://wa.me/7900148867" target="_blank" rel="noopener" class="contact__card contact__card--wa">
+                    <div class="contact__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    </div>
+                    <div>
+                        <div class="contact__label">WhatsApp</div>
+                        <div class="contact__value">+7 (900) 148-88-67</div>
+                    </div>
+                </a>
+                <a href="mailto:hello@choco-hotelki.ru" class="contact__card contact__card--email">
+                    <div class="contact__icon">📧</div>
+                    <div>
+                        <div class="contact__label">Email</div>
+                        <div class="contact__value">hello@choco-hotelki.ru</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="logo__icon">🍫</span>
+                <span class="logo__text logo__text--light">Шоколадные хотелки</span>
+            </div>
+            <p class="footer__copy">&copy; 2026 Шоколадные хотелки. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- ========== ORDER MODAL ========== -->
+    <div class="modal" id="orderModal">
+        <div class="modal__backdrop" id="modalBackdrop"></div>
+        <div class="modal__dialog">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <h3 class="modal__title">Оформить заказ</h3>
+            <p class="modal__product" id="modalProduct"></p>
+            <p class="modal__hint">Выберите, куда вам удобнее написать:</p>
+            <div class="modal__actions">
+                <a href="#" id="modalTg" target="_blank" rel="noopener" class="btn btn--tg">
+                    <span>Telegram</span>
+                </a>
+                <a href="#" id="modalWa" target="_blank" rel="noopener" class="btn btn--wa">
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

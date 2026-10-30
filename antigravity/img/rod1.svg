@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgLight" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1c202d"/>
+      <stop offset="60%" stop-color="#0c0e16"/>
+      <stop offset="100%" stop-color="#06070a"/>
+    </radialGradient>
+    <linearGradient id="carbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a4d5a"/>
+      <stop offset="25%" stop-color="#21232b"/>
+      <stop offset="50%" stop-color="#14151a"/>
+      <stop offset="75%" stop-color="#2d303b"/>
+      <stop offset="100%" stop-color="#111216"/>
+    </linearGradient>
+    <linearGradient id="cork" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dfbb89"/>
+      <stop offset="30%" stop-color="#cda36e"/>
+      <stop offset="70%" stop-color="#b68852"/>
+      <stop offset="100%" stop-color="#936737"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5d799"/>
+      <stop offset="50%" stop-color="#c9a96e"/>
+      <stop offset="100%" stop-color="#8b6831"/>
+    </linearGradient>
+    <linearGradient id="floatRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff3b30"/>
+      <stop offset="70%" stop-color="#c41c13"/>
+      <stop offset="100%" stop-color="#800b05"/>
+    </linearGradient>
+    <linearGradient id="floatWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#d0d5dd"/>
+      <stop offset="100%" stop-color="#98a2b3"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="castShadow" x="-10%" y="-10%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgLight)"/>
+  
+  <!-- Subtle Studio Light Spot -->
+  <ellipse cx="320" cy="210" rx="220" ry="90" fill="#c9a96e" opacity="0.06" filter="url(#softGlow)"/>
+  <ellipse cx="280" cy="270" rx="240" ry="30" fill="#000000" opacity="0.6" filter="url(#softGlow)"/>
+
+  <!-- Rod Reflection -->
+  <path d="M 60 260 L 520 180" stroke="#c9a96e" stroke-width="6" opacity="0.1" filter="url(#softGlow)"/>
+
+  <!-- Float (Поплавок) -->
+  <g transform="translate(370, 240) rotate(-18)" filter="url(#castShadow)">
+    <!-- Antenna -->
+    <line x1="0" y1="-50" x2="0" y2="0" stroke="#ffe600" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="0" cy="-52" r="3.5" fill="#ff3b30" filter="url(#softGlow)"/>
+    <!-- Body top red -->
+    <ellipse cx="0" cy="10" rx="9" ry="16" fill="url(#floatRed)"/>
+    <!-- Body bottom white -->
+    <path d="M -9 10 Q 0 45 0 55 Q 0 45 9 10 Z" fill="url(#floatWhite)"/>
+    <!-- Gold accent rings -->
+    <rect x="-8.5" y="8" width="17" height="3" fill="url(#gold)"/>
+    <!-- Stem -->
+    <line x1="0" y1="55" x2="0" y2="90" stroke="#222" stroke-width="2"/>
+    <circle cx="0" cy="90" r="1.5" fill="#888"/>
+  </g>
+
+  <!-- Main Rod Blank (Бланк удочки) -->
+  <g filter="url(#castShadow)">
+    <!-- Cork handle -->
+    <path d="M 40 290 L 170 248" stroke="url(#cork)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M 40 290 L 170 248" stroke="#000" stroke-width="17" stroke-opacity="0.15" stroke-dasharray="2 6" stroke-linecap="round"/>
+    <!-- Butt Cap & Reel Seat Gold Rings -->
+    <path d="M 36 291 L 46 288" stroke="url(#gold)" stroke-width="19" stroke-linecap="round"/>
+    <path d="M 125 262 L 145 256" stroke="url(#gold)" stroke-width="19"/>
+    <path d="M 160 251 L 172 247" stroke="url(#gold)" stroke-width="18"/>
+
+    <!-- Carbon blank tapering -->
+    <path d="M 170 248 L 320 200" stroke="url(#carbon)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 315 202 L 460 155" stroke="url(#carbon)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 455 157 L 560 120" stroke="url(#carbon)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Gold Guide Rings (Пропускные кольца) -->
+    <!-- Guide 1 -->
+    <g transform="translate(240, 226) rotate(-17)">
+      <path d="M 0 0 L 0 -18" stroke="url(#gold)" stroke-width="2"/>
+      <ellipse cx="0" cy="-20" rx="6" ry="9" fill="none" stroke="url(#gold)" stroke-width="2.5"/>
+      <ellipse cx="0" cy="-20" rx="4" ry="7" fill="none" stroke="#2b384e" stroke-width="1.8"/>
+    </g>
+    <!-- Guide 2 -->
+    <g transform="translate(360, 187) rotate(-17)">
+      <path d="M 0 0 L 0 -14" stroke="url(#gold)" stroke-width="1.8"/>
+      <ellipse cx="0" cy="-16" rx="4.5" ry="7" fill="none" stroke="url(#gold)" stroke-width="2"/>
+      <ellipse cx="0" cy="-16" rx="3" ry="5.5" fill="none" stroke="#2b384e" stroke-width="1.5"/>
+    </g>
+    <!-- Guide 3 -->
+    <g transform="translate(470, 151) rotate(-17)">
+      <path d="M 0 0 L 0 -10" stroke="url(#gold)" stroke-width="1.5"/>
+      <ellipse cx="0" cy="-12" rx="3.5" ry="5" fill="none" stroke="url(#gold)" stroke-width="1.6"/>
+      <ellipse cx="0" cy="-12" rx="2.2" ry="4" fill="none" stroke="#2b384e" stroke-width="1.2"/>
+    </g>
+    <!-- Tip Guide (Тюльпан) -->
+    <g transform="translate(560, 120) rotate(-17)">
+      <ellipse cx="0" cy="-6" rx="2.5" ry="3.5" fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+    </g>
+
+    <!-- Monofilament Line glint (Леска) -->
+    <path d="M 135 258 Q 280 260 370 240 Q 460 210 560 120" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.6"/>
+  </g>
+
+  <!-- Realistic Water Droplets with highlights -->
+  <circle cx="160" cy="242" r="3" fill="#ffffff" opacity="0.7" filter="url(#softGlow)"/>
+  <circle cx="161" cy="241" r="1" fill="#fff"/>
+  <circle cx="270" cy="214" r="2.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="410" cy="172" r="2" fill="#ffffff" opacity="0.7"/>
+
+  <!-- Badge label watermark -->
+  <text x="50" y="360" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#c9a96e" opacity="0.4">CARBON MATRIX 4.0M CLASSIC</text>
+</svg>

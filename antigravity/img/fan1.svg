@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgChoco" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1f1816"/>
+      <stop offset="50%" stop-color="#110d0c"/>
+      <stop offset="100%" stop-color="#070505"/>
+    </radialGradient>
+    <linearGradient id="milkChoco" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a4b33"/>
+      <stop offset="35%" stop-color="#563020"/>
+      <stop offset="70%" stop-color="#3c1e13"/>
+      <stop offset="100%" stop-color="#241009"/>
+    </linearGradient>
+    <linearGradient id="chocoGloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#966144"/>
+      <stop offset="50%" stop-color="#673924"/>
+      <stop offset="100%" stop-color="#3b1d10"/>
+    </linearGradient>
+    <linearGradient id="brassGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcedc7"/>
+      <stop offset="40%" stop-color="#d4af6a"/>
+      <stop offset="80%" stop-color="#9c7832"/>
+      <stop offset="100%" stop-color="#5a4112"/>
+    </linearGradient>
+    <filter id="softGlowFan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="castShadowFan" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000000" flood-opacity="0.95"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bgChoco)"/>
+
+  <!-- Warm chocolate aroma vapor waves -->
+  <path d="M 140 180 Q 200 120 280 150 T 420 110" fill="none" stroke="#d4af6a" stroke-width="2" opacity="0.12" filter="url(#softGlowFan)"/>
+  <path d="M 180 220 Q 260 160 340 190 T 480 140" fill="none" stroke="#d4af6a" stroke-width="3" opacity="0.08" filter="url(#softGlowFan)"/>
+
+  <!-- Shadow on surface -->
+  <ellipse cx="300" cy="340" rx="140" ry="24" fill="#000000" opacity="0.85" filter="url(#softGlowFan)"/>
+
+  <!-- Desk Fan Assembly -->
+  <g filter="url(#castShadowFan)">
+    <!-- Base (Тяжелая круглая база цвета шоколада) -->
+    <ellipse cx="300" cy="330" rx="90" ry="25" fill="url(#milkChoco)"/>
+    <ellipse cx="300" cy="326" rx="84" ry="21" fill="url(#chocoGloss)"/>
+    <!-- Gold Trim Base Ring -->
+    <ellipse cx="300" cy="326" rx="84" ry="21" fill="none" stroke="url(#brassGold)" stroke-width="2"/>
+    
+    <!-- Rotary Switch / Buttons (Латунный регулятор скоростей) -->
+    <ellipse cx="300" cy="325" rx="14" ry="7" fill="url(#brassGold)"/>
+    <ellipse cx="300" cy="322" rx="11" ry="5" fill="#2d170f"/>
+    <circle cx="300" cy="322" r="2" fill="#ffd580"/>
+
+    <!-- Neck / Stand (Изящная латунная ножка) -->
+    <path d="M 293 325 L 293 210 Q 293 190 300 190 Q 307 190 307 210 L 307 325 Z" fill="url(#brassGold)"/>
+    <!-- Motor Housing (Корпус мотора сзади) -->
+    <ellipse cx="300" cy="180" rx="35" ry="32" fill="url(#milkChoco)"/>
+
+    <!-- Fan Outer Grille (Внешняя золоченая решетка) -->
+    <circle cx="300" cy="180" r="105" fill="#140d0a" stroke="url(#brassGold)" stroke-width="6"/>
+    <circle cx="300" cy="180" r="100" fill="none" stroke="url(#milkChoco)" stroke-width="4"/>
+    <circle cx="300" cy="180" r="75" fill="none" stroke="url(#brassGold)" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="300" cy="180" r="50" fill="none" stroke="url(#brassGold)" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Radial Grille Spokes (Спицы решетки) -->
+    <g stroke="url(#brassGold)" stroke-width="1.2" opacity="0.5">
+      <line x1="300" y1="75" x2="300" y2="285"/>
+      <line x1="195" y1="180" x2="405" y2="180"/>
+      <line x1="225" y1="105" x2="375" y2="255"/>
+      <line x1="375" y1="105" x2="225" y2="255"/>
+      <line x1="205" y1="140" x2="395" y2="220"/>
+      <line x1="205" y1="220" x2="395" y2="140"/>
+      <line x1="260" y1="80" x2="340" y2="280"/>
+      <line x1="340" y1="80" x2="260" y2="280"/>
+    </g>
+
+    <!-- Glossy Chocolate Fan Blades (Шоколадные лопасти) -->
+    <!-- Blade 1 -->
+    <path d="M 300 180 Q 260 110 300 85 Q 330 95 305 175 Z" fill="url(#chocoGloss)" stroke="url(#brassGold)" stroke-width="1"/>
+    <!-- Blade 2 -->
+    <path d="M 300 180 Q 375 190 385 230 Q 360 250 305 185 Z" fill="url(#chocoGloss)" stroke="url(#brassGold)" stroke-width="1"/>
+    <!-- Blade 3 -->
+    <path d="M 300 180 Q 230 220 220 255 Q 205 230 295 178 Z" fill="url(#chocoGloss)" stroke="url(#brassGold)" stroke-width="1"/>
+
+    <!-- Center Centerpiece Emblem (Эмблема по центру) -->
+    <circle cx="300" cy="180" r="24" fill="url(#brassGold)"/>
+    <circle cx="300" cy="180" r="20" fill="url(#milkChoco)"/>
+    <!-- Cocoa Bean / Fan icon inside center -->
+    <path d="M 293 174 Q 300 166 307 174 Q 314 186 300 190 Q 286 186 293 174 Z" fill="url(#brassGold)"/>
+    <circle cx="300" cy="180" r="2" fill="#fff"/>
+  </g>
+
+  <text x="50" y="360" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#d4af6a" opacity="0.6">CHOCO-DIFFUSER 3-SPEED / SILENT</text>
+</svg>

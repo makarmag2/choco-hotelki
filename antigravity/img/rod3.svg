@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgKids" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#1f242e"/>
+      <stop offset="60%" stop-color="#101319"/>
+      <stop offset="100%" stop-color="#08090d"/>
+    </radialGradient>
+    <linearGradient id="kidColor" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7a00"/>
+      <stop offset="50%" stop-color="#ff9e00"/>
+      <stop offset="100%" stop-color="#00c4cc"/>
+    </linearGradient>
+    <linearGradient id="kidTeal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#26d0ce"/>
+      <stop offset="100%" stop-color="#1a2980"/>
+    </linearGradient>
+    <filter id="softGlow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="castShadow3" x="-15%" y="-15%" width="130%" height="150%">
+      <feDropShadow dx="2" dy="14" stdDeviation="12" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bgKids)"/>
+  
+  <ellipse cx="300" cy="220" rx="190" ry="80" fill="#ff7a00" opacity="0.08" filter="url(#softGlow3)"/>
+  <ellipse cx="280" cy="285" rx="220" ry="24" fill="#000" opacity="0.6" filter="url(#softGlow3)"/>
+
+  <!-- Spincast Reel and Kid Rod -->
+  <g filter="url(#castShadow3)">
+    <!-- Foam bright handle -->
+    <path d="M 70 280 L 175 240" stroke="url(#kidColor)" stroke-width="22" stroke-linecap="round"/>
+    <!-- Black comfort ribs -->
+    <path d="M 90 272 L 95 270" stroke="#111" stroke-width="24"/>
+    <path d="M 115 263 L 120 261" stroke="#111" stroke-width="24"/>
+    <path d="M 140 253 L 145 251" stroke="#111" stroke-width="24"/>
+
+    <!-- Cute Compact Spincast Reel (Катушка с кнопкой) -->
+    <g transform="translate(180, 248)">
+      <rect x="-15" y="-12" width="40" height="24" rx="10" transform="rotate(-21)" fill="#ff7a00"/>
+      <!-- Cone cover -->
+      <ellipse cx="14" cy="2" rx="14" ry="18" fill="url(#kidTeal)"/>
+      <circle cx="18" cy="2" r="4" fill="#111"/>
+      <!-- Thumb push button -->
+      <rect x="-16" y="-8" width="10" height="12" rx="3" fill="#ffffff"/>
+      <!-- Handle -->
+      <circle cx="0" cy="18" r="7" fill="#fff" stroke="#ff7a00" stroke-width="3"/>
+    </g>
+
+    <!-- Fiber Rod Blank -->
+    <path d="M 195 233 L 360 170" stroke="url(#kidTeal)" stroke-width="11" stroke-linecap="round"/>
+    <path d="M 355 172 L 530 105" stroke="#ffaa00" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Colorful guides -->
+    <g transform="translate(280, 200) rotate(-21)">
+      <path d="M 0 0 L 0 -15" stroke="#fff" stroke-width="3"/>
+      <ellipse cx="0" cy="-18" rx="8" ry="11" fill="none" stroke="#ff7a00" stroke-width="3.5"/>
+    </g>
+    <g transform="translate(410, 150) rotate(-21)">
+      <path d="M 0 0 L 0 -11" stroke="#fff" stroke-width="2.5"/>
+      <ellipse cx="0" cy="-14" rx="6" ry="8" fill="none" stroke="#26d0ce" stroke-width="3"/>
+    </g>
+    <g transform="translate(525, 107) rotate(-21)">
+      <ellipse cx="0" cy="-8" rx="5" ry="7" fill="none" stroke="#ff7a00" stroke-width="3"/>
+    </g>
+
+    <!-- Fluorescent Round Bobber (Яркий круглый поплавок-шарик) -->
+    <g transform="translate(380, 260)" filter="url(#softGlow3)">
+      <!-- Ball top orange -->
+      <path d="M -18 0 A 18 18 0 0 1 18 0 Z" fill="#ff3b30"/>
+      <!-- Ball bottom white -->
+      <path d="M -18 0 A 18 18 0 0 0 18 0 Z" fill="#ffffff"/>
+      <rect x="-2" y="-24" width="4" height="48" rx="2" fill="#ffe600"/>
+    </g>
+
+    <!-- Cute Soft Fish Lure -->
+    <g transform="translate(460, 255) rotate(20)">
+      <ellipse cx="0" cy="0" rx="22" ry="11" fill="#00e5ff"/>
+      <polygon points="18,0 32,-10 32,10" fill="#ff9100"/>
+      <circle cx="-10" cy="-3" r="4" fill="#fff"/>
+      <circle cx="-10" cy="-3" r="2" fill="#000"/>
+    </g>
+  </g>
+
+  <text x="50" y="360" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#ff9e00" opacity="0.6">EASY CATCH / SAFE &amp; DURABLE 2.0M</text>
+</svg>

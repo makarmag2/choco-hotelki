@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgUsb" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#241d1a"/>
+      <stop offset="60%" stop-color="#120e0c"/>
+      <stop offset="100%" stop-color="#060504"/>
+    </radialGradient>
+    <linearGradient id="chocBar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#653f2c"/>
+      <stop offset="40%" stop-color="#462719"/>
+      <stop offset="100%" stop-color="#28130a"/>
+    </linearGradient>
+    <linearGradient id="softBlades" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b0815e"/>
+      <stop offset="50%" stop-color="#805335"/>
+      <stop offset="100%" stop-color="#4e2c17"/>
+    </linearGradient>
+    <linearGradient id="goldUsb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe8a3"/>
+      <stop offset="50%" stop-color="#d4af6a"/>
+      <stop offset="100%" stop-color="#8c6827"/>
+    </linearGradient>
+    <filter id="softGlowUsb" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="castShadowUsb" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="2" dy="18" stdDeviation="15" flood-color="#000000" flood-opacity="0.95"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#bgUsb)"/>
+
+  <ellipse cx="300" cy="330" rx="140" ry="22" fill="#000" opacity="0.8" filter="url(#softGlowUsb)"/>
+  <circle cx="340" cy="160" r="120" fill="#d4af6a" opacity="0.08" filter="url(#softGlowUsb)"/>
+
+  <!-- Portable Fan Gadget -->
+  <g filter="url(#castShadowUsb)">
+    <!-- Base shaped like a real chocolate bar segment (Плитка шоколада в основании) -->
+    <g transform="translate(180, 275) rotate(-6)">
+      <!-- Main chocolate base slab -->
+      <rect x="0" y="0" width="130" height="55" rx="8" fill="url(#chocBar)" stroke="url(#goldUsb)" stroke-width="1.5"/>
+      <!-- Segments / Choco squares -->
+      <rect x="8" y="8" width="34" height="38" rx="4" fill="#351b11" stroke="#5a3321" stroke-width="1.5"/>
+      <rect x="48" y="8" width="34" height="38" rx="4" fill="#351b11" stroke="#5a3321" stroke-width="1.5"/>
+      <rect x="88" y="8" width="34" height="38" rx="4" fill="#351b11" stroke="#5a3321" stroke-width="1.5"/>
+      <!-- Cocoa percentage engraving -->
+      <text x="25" y="32" font-family="'Montserrat', sans-serif" font-size="10" font-weight="800" fill="#b0815e" text-anchor="middle">72%</text>
+      <!-- USB-C Port with gold pins -->
+      <rect x="128" y="22" width="6" height="12" rx="2" fill="#111" stroke="url(#goldUsb)" stroke-width="1"/>
+      <circle cx="70" cy="48" r="2" fill="#00e5ff" filter="url(#softGlowUsb)"/>
+    </g>
+
+    <!-- Flexible Soft-touch Gooseneck (Гибкая силиконовая ножка) -->
+    <path d="M 270 280 Q 250 200 320 170" fill="none" stroke="url(#chocBar)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M 270 280 Q 250 200 320 170" fill="none" stroke="url(#goldUsb)" stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"/>
+
+    <!-- Fan Head (Голова вентилятора) -->
+    <g transform="translate(325, 165)">
+      <!-- Motor pod -->
+      <ellipse cx="0" cy="0" rx="18" ry="18" fill="url(#chocBar)" stroke="url(#goldUsb)" stroke-width="2"/>
+      
+      <!-- Safe Soft Dual Blades (Силиконовые безопасные лопасти) -->
+      <!-- Blade 1 -->
+      <path d="M 0 0 Q -50 -55 0 -85 Q 35 -65 0 0 Z" fill="url(#softBlades)" stroke="url(#goldUsb)" stroke-width="1"/>
+      <!-- Blade 2 -->
+      <path d="M 0 0 Q 50 55 0 85 Q -35 65 0 0 Z" fill="url(#softBlades)" stroke="url(#goldUsb)" stroke-width="1"/>
+
+      <!-- Center chocolate button -->
+      <circle cx="0" cy="0" r="9" fill="url(#goldUsb)"/>
+      <circle cx="0" cy="0" r="6" fill="#28130a"/>
+    </g>
+  </g>
+
+  <!-- Gold USB cable loosely curled nearby -->
+  <path d="M 330 330 Q 380 345 420 325 T 480 340" fill="none" stroke="url(#goldUsb)" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <rect x="480" y="335" width="22" height="10" rx="2" fill="#222" stroke="url(#goldUsb)" stroke-width="1"/>
+
+  <text x="50" y="360" font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#d4af6a" opacity="0.6">USB-C PORTABLE / 72% DARK CHOCO SCENT</text>
+</svg>
